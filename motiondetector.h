@@ -1,0 +1,4 @@
+#ifndef MOTIONDETECTOR_H
+#define MOTIONDETECTOR_H
+
+#endif // MOTIONDETECTOR_H

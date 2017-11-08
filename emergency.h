@@ -8,6 +8,7 @@ public:
 
     bool handleProtocol();
 
+
 };
 
 #endif // EMERGENCY_H

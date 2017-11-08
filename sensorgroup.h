@@ -1,15 +1,13 @@
 #ifndef SENSORGROUP_H
 #define SENSORGROUP_H
+#include"sensorinterface.h"
 
 class SensorGroup
 {
 public:
-
     SensorGroup();
+    void addSensor( std::shared_ptr<SensorInterface> s);
 
-    void addSensor(SensorInterface s);
-
-    void removeSensor(SensorInterface s);
 private:
     vector sensors;
 

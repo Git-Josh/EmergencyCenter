@@ -7,7 +7,7 @@
 class Sensor
 {
 public:
-    Sensor(const long sensorID, const std::string & vendor, Emergency protocol, bool state);
+    Sensor(const long sensorID, const std::string & vendor);
     virtual ~Sensor();
 
     //Getters & Setters
@@ -15,11 +15,12 @@ public:
     std::string & getVendor() const;
     Emergency getProtocol();
     bool getState();
+    void notifyEmergencyCenter();
 
 private:
     const long sensorID;
     const std::string & vendor;
-    Emergency protocol;
+    std::vector<const Emergency*> protocols;
     bool state;
 
 };

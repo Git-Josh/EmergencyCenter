@@ -10,6 +10,4 @@ public:
 
 };
 
-#endif // SENSORS_H
-
 #endif // EMERGENCY_H

@@ -4,6 +4,7 @@ class Smokedetector: public Sensor
 {
 public:
     Smokedetector(const double sensitivity, const long sensorID, const std::string & vendor, Emergency protocol, bool state);
+    const double getSensitivity();
 
 
 private:

@@ -5,7 +5,7 @@ class SensorInterface
 {
 public:
     void activateSensor();
-    void deactivateSensor();
+    void deActivateSensor();
     void testSensor();
     void getOverview();
 private:

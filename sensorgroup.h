@@ -11,7 +11,7 @@ public:
 
     void removeSensor(SensorInterface s);
 private:
-    vector sensor;
+    vector sensors;
 
 };
 

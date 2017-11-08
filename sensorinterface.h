@@ -4,10 +4,10 @@
 class SensorInterface
 {
 public:
-    void activateSensor();
-    void deActivateSensor();
-    void testSensor();
-    void getOverview();
+    virtual void activateSensor();
+    virtual void deActivateSensor();
+    virtual void testSensor();
+    virtual void getOverview();
 private:
 
 };

@@ -6,6 +6,7 @@ public:
     Smokedetector(const double sensitivity, const long sensorID, const std::string & vendor, Emergency protocol, bool state);
     const double getSensitivity();
 
+    virtual void getOverview()override;
 
 private:
     const double sensitivity;

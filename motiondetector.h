@@ -7,6 +7,7 @@ public:
     const double getMinRange();
     const double getMaxRange();
 
+    virtual void getOverview()override;
 
 private:
     const double minRange;

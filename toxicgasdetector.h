@@ -4,9 +4,9 @@
 class Toxicgasdetector: public Sensor
 {
 public:
-    Toxicgasdetector(const double concentration, const std::string & gasType, const long sensorID, const std::string & vendor, Emergency protocol, bool state);
-    const std::string & getGasType();
-    const double getConcentration();
+    Toxicgasdetector(const double aConcentration, const std::string & aGasType, const long sensorID, const std::string & vendor);
+    std::string & getGasType() const;
+    double getConcentration() const;
 
     virtual void getOverview()override;
 

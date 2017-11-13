@@ -2,6 +2,7 @@
 #define SENSORS_H
 #include <string>
 #include <emergency.h>
+#include <vector>
 
 
 class Sensor

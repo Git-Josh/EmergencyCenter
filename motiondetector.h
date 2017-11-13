@@ -3,9 +3,9 @@
 class Motiondetector: public Sensor
 {
 public:
-    Motiondetector(const double minRange, const double maxRange,const double sensitivity, const long sensorID, const std::string & vendor, Emergency protocol, bool state);
-    const double getMinRange();
-    const double getMaxRange();
+    Motiondetector(const double minRange, const double maxRange, const long sensorID, const std::string & vendor);
+    double getMinRange() const;
+    double getMaxRange() const;
 
     virtual std::string getOverview()override;
 

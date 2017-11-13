@@ -18,9 +18,9 @@ public:
     bool getState();
     void notifyEmergencyCenter();
 
-    virtual void activateSensor() override;
-    virtual void deActivateSensor()override;
-    virtual void testSensor()override;
+    virtual void activateSensor();
+    virtual void deActivateSensor();
+    virtual void testSensor();
     virtual std::string getOverview();
 
 private:

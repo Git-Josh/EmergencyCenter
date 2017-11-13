@@ -7,7 +7,7 @@ Toxicgasdetector::Toxicgasdetector(const double aConcentration, const std::strin
 
 }
 
-std::string &Toxicgasdetector::getGasType() const
+std::string Toxicgasdetector::getGasType() const
 {
     return this->gasType;
 }
@@ -21,6 +21,5 @@ std::string Toxicgasdetector::getOverview()
 {
     std::stringstream result;
     result<<"Toxic Gas Detector: " << Sensor::getOverview() << " checks that " << this->gasType << " no higher concentration than: " << this->concentration << std::endl;
-    std::cout<<result.str();
-    return result;
+    return result.str();
 }

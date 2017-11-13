@@ -1,29 +1,29 @@
 #include "sensor.h"
 #include "sensorinterface.h"
+#include <sstream>
 
-Sensors::Sensors(const long aSensorID, const std::string & aVendor):
+Sensor::Sensor(const long aSensorID, const std::string & aVendor):
     sensorID{aSensorID}, vendor{aVendor}
 {
     state = true;
 }
-void activateSensor()
+void Sensor::activateSensor()
 {
-    state = true;
+    state=true;
 }
-void deActivateSensor()
+void Sensor::deActivateSensor()
 {
     state = false;
 }
-void testSensor()
+void Sensor::testSensor()
 {
     if(state) notifyEmergencyCenter();
 
 }
-std::string getOverview()
+std::string Sensor::getOverview()
 {
     std::stringstream result;
     result<<"SensorId = " << this->sensorID << ", from Vendor; " << this->vendor << std::endl;
-    std::cout<<result.str();
-    return result;
+    return result.str();;
 }
 

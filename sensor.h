@@ -20,7 +20,7 @@ public:
     virtual void activateSensor() override;
     virtual void deActivateSensor()override;
     virtual void testSensor()override;
-    virtual void getOverview();
+    virtual std::string getOverview();
 
 private:
     const long sensorID;

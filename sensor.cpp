@@ -19,4 +19,11 @@ void testSensor()
     if(state) notifyEmergencyCenter();
 
 }
+std::string getOverview()
+{
+    std::stringstream result;
+    result<<"SensorId = " << this->sensorID << ", from Vendor; " << this->vendor << std::endl;
+    std::cout<<result.str();
+    return result;
+}
 

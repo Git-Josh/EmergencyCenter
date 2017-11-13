@@ -6,7 +6,10 @@ Toxicgasdetector::Toxicgasdetector(const double aConcentration, const std::strin
 {
 
 }
+Toxicgasdetector::~Toxicgasdetector()
+{
 
+}
 std::string Toxicgasdetector::getGasType() const
 {
     return this->gasType;

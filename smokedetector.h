@@ -5,6 +5,7 @@ class Smokedetector: public Sensor
 {
 public:
     Smokedetector(const double sensitivity, const long sensorID, const std::string & vendor);
+    virtual ~Smokedetector();
     double getSensitivity() const;
 
     virtual std::string getOverview()override;

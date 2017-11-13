@@ -7,6 +7,7 @@ class Toxicgasdetector: public Sensor
 {
 public:
     Toxicgasdetector(const double aConcentration, const std::string & aGasType, const long sensorID, const std::string & vendor);
+    virtual ~Toxicgasdetector();
     std::string getGasType() const;
     double getConcentration() const;
 

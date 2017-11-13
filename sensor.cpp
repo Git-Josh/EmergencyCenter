@@ -7,6 +7,9 @@ Sensor::Sensor(const long aSensorID, const std::string & aVendor):
 {
     state = true;
 }
+Sensor::~Sensor()
+{
+}
 void Sensor::activateSensor()
 {
     state=true;
@@ -17,7 +20,7 @@ void Sensor::deActivateSensor()
 }
 void Sensor::testSensor()
 {
-    if(state) notifyEmergencyCenter();
+    //if(state) notifyEmergencyCenter();
 
 }
 std::string Sensor::getOverview()

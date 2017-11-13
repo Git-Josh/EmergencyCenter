@@ -9,6 +9,11 @@ Motiondetector::Motiondetector(const double minRange, const double maxRange, con
 
 }
 
+Motiondetector::~Motiondetector()
+{
+
+}
+
 double Motiondetector::getMinRange() const
 {
     return this->minRange;

@@ -13,7 +13,9 @@ Smokedetector::Smokedetector(const double aSensitivity, const long aSensorID, co
 //    protocols.push_back(evac);
 }
 
-
+Smokedetector::~Smokedetector()
+{
+}
 
 std::string Smokedetector::getOverview()
 {

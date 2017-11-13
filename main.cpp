@@ -19,6 +19,8 @@ int main()
     Smokedetector s7(0.05, 07, "JoshuaCo");
     Smokedetector s8(0.02, 10, "MiertCo");
     cout << s2.getOverview()<<endl;
+    cout << s4.getOverview()<<endl;
+    cout << s8.getOverview()<<endl;
 
 
     cout << "Hello World!" << endl;

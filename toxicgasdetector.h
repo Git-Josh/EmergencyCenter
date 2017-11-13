@@ -8,7 +8,7 @@ public:
     std::string & getGasType() const;
     double getConcentration() const;
 
-    virtual void getOverview()override;
+    virtual std::string getOverview()override;
 
 private:
     const std::string & gasType;

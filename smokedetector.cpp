@@ -15,16 +15,16 @@ Smokedetector::Smokedetector(const double aSensitivity, const long aSensorID, co
 
 
 
-void Smokedetector::getOverview()
+std::string Smokedetector::getOverview()
 {
     std::stringstream result;
     result << "Smokedetector: " << Sensor::getOverview() << " with sensitivity = "
-           << this->sensitivity.toString() << std::endl;
-    std::cout << result.str();
+           << this->sensitivity << std::endl;
+    return result.str();
 
 }
 
-const double Smokedetector::getSensitivity()
+double Smokedetector::getSensitivity()const
 {
     return this->sensitivity;
 }

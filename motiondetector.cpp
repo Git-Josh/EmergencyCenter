@@ -10,21 +10,21 @@ Motiondetector::Motiondetector(const double minRange, const double maxRange, con
 
 }
 
-const double Motiondetector::getMinRange()
+double Motiondetector::getMinRange() const
 {
     return this->minRange;
 }
 
-const double Motiondetector::getMaxRange()
+double Motiondetector::getMaxRange() const
 {
     return this->maxRange;
 }
 
-void Motiondetector::getOverview()
+std::string Motiondetector::getOverview()
 {
     std::stringstream result;
     result << "MotionDetector: " << Sensor::getOverview() << " with sensitivity = "
            << this->sensitivity.toString() << " ranging from " << this->minRange.toString()<< " till "
            << this->maxRange.toString() << std::endl;
-    std::cout << result.str();
+    return result.str();
 }

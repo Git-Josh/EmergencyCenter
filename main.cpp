@@ -23,6 +23,6 @@ int main()
     cout << s8.getOverview()<<endl;
 
 
-    cout << "Hello World!" << endl;
+    
     return 0;
 }

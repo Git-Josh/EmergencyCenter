@@ -20,7 +20,7 @@ void SensorGroup::activateSensor()
 {
     for (const auto & aSensor : sensors)
     {
-        aSensor.activateSensor();
+        aSensor->activateSensor();
 
     }
 }
@@ -29,7 +29,7 @@ void SensorGroup::deActivateSensor()
 {
     for (const auto & aSensor : sensors)
     {
-        aSensor.deActivateSensor();
+        aSensor->deActivateSensor();
 
     }
 }
@@ -38,7 +38,7 @@ void SensorGroup::testSensor()
 {
     for (const auto & aSensor : sensors)
     {
-        aSensor.testSensor();
+        aSensor->testSensor();
 
     }
 }
@@ -54,15 +54,14 @@ std::string SensorGroup::getOverview()
 
     for (const auto & aSensor : sensors)
     {
-
-        result = result + aSensor.getOverview();
+        result << aSensor->getOverview();
 
     }
     return result.str();
 }
 
 
-int SensorGroup::addSensor(std::shared_ptr<const SensorInterface> newSensor)
+int SensorGroup::addSensor(std::shared_ptr<SensorInterface> newSensor)
 {
     bool found = false;
     for (auto & aSensor : sensors)

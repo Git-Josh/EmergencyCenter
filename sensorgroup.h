@@ -10,7 +10,7 @@ class SensorGroup
 public:
     SensorGroup(const std::string &aName);
     ~SensorGroup();
-    int addSensor( std::shared_ptr<const SensorInterface> newSensor);
+    int addSensor( std::shared_ptr<SensorInterface> newSensor);
     virtual void activateSensor();
     virtual void deActivateSensor();
     virtual void testSensor();
@@ -19,7 +19,7 @@ public:
 
 private:
     const std::string name;
-    std::vector<const SensorInterface> sensors;
+    std::vector<std::shared_ptr<SensorInterface>> sensors;
 
 };
 

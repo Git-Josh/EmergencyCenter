@@ -5,17 +5,17 @@
 #include <memory>
 #include"sensorinterface.h"
 
-class SensorGroup
+class SensorGroup : public SensorInterface
 {
 public:
     SensorGroup(const std::string &aName);
     ~SensorGroup();
-    int addSensor( std::shared_ptr<SensorInterface> newSensor);
+    int addSensor(std::shared_ptr<SensorInterface> newSensor);
     virtual void activateSensor();
     virtual void deActivateSensor();
     virtual void testSensor();
     std::string getName() const;
-    virtual std::string getOverview();
+    virtual std::string getOverview() const;
 
 private:
     const std::string name;

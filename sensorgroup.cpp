@@ -18,7 +18,7 @@ SensorGroup::~SensorGroup()
 
 void SensorGroup::activateSensor()
 {
-    for (const auto & aSensor : sensors)
+    for (auto & aSensor : sensors)
     {
         aSensor->activateSensor();
 
@@ -27,7 +27,7 @@ void SensorGroup::activateSensor()
 
 void SensorGroup::deActivateSensor()
 {
-    for (const auto & aSensor : sensors)
+    for (auto & aSensor : sensors)
     {
         aSensor->deActivateSensor();
 
@@ -48,7 +48,7 @@ std::string SensorGroup::getName() const
     return name;
 }
 
-std::string SensorGroup::getOverview()
+std::string SensorGroup::getOverview() const
 {
     std::stringstream result;
 
@@ -64,7 +64,7 @@ std::string SensorGroup::getOverview()
 int SensorGroup::addSensor(std::shared_ptr<SensorInterface> newSensor)
 {
     bool found = false;
-    for (auto & aSensor : sensors)
+    for (auto &aSensor : sensors)
       if (aSensor == newSensor)
         {
         found = true;
@@ -74,7 +74,7 @@ int SensorGroup::addSensor(std::shared_ptr<SensorInterface> newSensor)
       {
       sensors.push_back(newSensor);
       }
-    else{std::cout<<"This Sensor already exists in this group"<<std::endl;}
+    else{std::cout<<"This Sensor already exists in this group: "<<newSensor->getOverview()<<std::endl;}
 
     return sensors.size();
 

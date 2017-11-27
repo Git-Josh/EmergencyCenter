@@ -24,7 +24,7 @@ double Motiondetector::getMaxRange() const
     return this->maxRange;
 }
 
-std::string Motiondetector::getOverview()
+std::string Motiondetector::getOverview() const
 {
     std::stringstream result;
     result << "Motion Detector: " << Sensor::getOverview() << " ranging from " << this->minRange<< " till "

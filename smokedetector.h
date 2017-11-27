@@ -8,7 +8,7 @@ public:
     virtual ~Smokedetector();
     double getSensitivity() const;
 
-    virtual std::string getOverview()override;
+    virtual std::string getOverview()const override;
 
 private:
     const double sensitivity;

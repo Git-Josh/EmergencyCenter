@@ -3,9 +3,10 @@
 #include <string>
 #include <emergency.h>
 #include <vector>
+#include <sensorinterface.h>
 
 
-class Sensor
+class Sensor : public SensorInterface
 {
 public:
     Sensor(const long sensorID, const std::string & vendor);
@@ -21,11 +22,11 @@ public:
     virtual void activateSensor();
     virtual void deActivateSensor();
     virtual void testSensor();
-    virtual std::string getOverview();
+    virtual std::string getOverview() const;
 
 private:
     const long sensorID;
-    const std::string & vendor;
+    const std::string vendor;
     std::vector<const Emergency*> protocols;
     bool state;
 

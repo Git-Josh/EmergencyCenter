@@ -24,7 +24,7 @@ void Sensor::testSensor()
 
 }
 
-std::string Sensor::getOverview()
+std::string Sensor::getOverview() const
 {
     std::stringstream result;
     result<<"SensorId = " << this->sensorID << ", from Vendor = " << this->vendor;

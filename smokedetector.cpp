@@ -17,7 +17,7 @@ Smokedetector::~Smokedetector()
 {
 }
 
-std::string Smokedetector::getOverview()
+std::string Smokedetector::getOverview() const
 {
     std::stringstream result;
     result << "Smoke Detector: " << Sensor::getOverview() << " with sensitivity = "

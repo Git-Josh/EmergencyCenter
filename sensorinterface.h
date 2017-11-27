@@ -5,10 +5,12 @@
 class SensorInterface
 {
 public:
+    virtual ~SensorInterface()= default;
+
     virtual void activateSensor();
     virtual void deActivateSensor();
     virtual void testSensor();
-    virtual std::string getOverview();
+    virtual std::string getOverview() const;
 private:
 
 };

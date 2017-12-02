@@ -8,12 +8,12 @@
 SensorGroup::SensorGroup(const std::string &aName):
     name{aName}
 {
-    std::cout << "Calling constructor of SensorGroup with name : " << name << std::endl;
+    //std::cout << "Calling constructor of SensorGroup with name : " << name << std::endl;
 }
 
 SensorGroup::~SensorGroup()
 {
-    std::cout << "Calling destructor of SensorGroup with name : " << name << std::endl;
+    //std::cout << "Calling destructor of SensorGroup with name : " << name << std::endl;
 }
 
 void SensorGroup::activateSensor()
@@ -55,7 +55,6 @@ std::string SensorGroup::getOverview() const
     for (const auto & aSensor : sensors)
     {
         result << aSensor->getOverview();
-
     }
     return result.str();
 }

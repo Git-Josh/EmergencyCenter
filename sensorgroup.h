@@ -9,13 +9,13 @@ class SensorGroup : public SensorInterface
 {
 public:
     SensorGroup(const std::string &aName);
-    ~SensorGroup();
+    virtual ~SensorGroup();
     int addSensor(std::shared_ptr<SensorInterface> newSensor);
-    virtual void activateSensor();
-    virtual void deActivateSensor();
-    virtual void testSensor();
+    virtual void activateSensor() override;
+    virtual void deActivateSensor() override;
+    virtual void testSensor() override;
     std::string getName() const;
-    virtual std::string getOverview() const;
+    virtual std::string getOverview() const override;
 
 private:
     const std::string name;

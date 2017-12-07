@@ -4,11 +4,7 @@
 class Emergency
 {
 public:
-    Emergency();
-
-    bool handleProtocol();
-
-
+    virtual bool handleProtocol(long sensorID) const=0;
 };
 
 #endif // EMERGENCY_H

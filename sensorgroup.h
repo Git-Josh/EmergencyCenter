@@ -13,7 +13,8 @@ public:
     int addSensor(std::shared_ptr<SensorInterface> newSensor);
     virtual void activateSensor() override;
     virtual void deActivateSensor() override;
-    virtual void testSensor() override;
+    virtual void testSensor() const override;
+    virtual void addProtocol(std::shared_ptr<Emergency> e) override;
     std::string getName() const;
     virtual std::string getOverview() const override;
 

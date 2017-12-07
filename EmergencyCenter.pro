@@ -4,12 +4,14 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    emergency.cpp \
     sensorgroup.cpp \
     smokedetector.cpp \
     toxicgasdetector.cpp \
     motiondetector.cpp \
-    sensor.cpp
+    sensor.cpp \
+    firebrigade.cpp \
+    evacuation.cpp \
+    policesquad.cpp
 
 HEADERS += \
     emergency.h \
@@ -18,4 +20,8 @@ HEADERS += \
     smokedetector.h \
     motiondetector.h \
     toxicgasdetector.h \
-    sensor.h
+    sensor.h \
+    emergency.h \
+    firebrigade.h \
+    evacuation.h \
+    policesquad.h

@@ -1,9 +1,10 @@
 #ifndef SENSORS_H
 #define SENSORS_H
 #include <string>
-#include <emergency.h>
+#include <memory>
 #include <vector>
-#include <sensorinterface.h>
+#include "emergency.h"
+#include "sensorinterface.h"
 
 
 class Sensor : public SensorInterface
@@ -15,19 +16,18 @@ public:
     //Getters & Setters
     long getSensorID() const;
     std::string & getVendor() const;
-    Emergency getProtocol();
     bool getState();
-    void notifyEmergencyCenter();
 
-    virtual void activateSensor();
-    virtual void deActivateSensor();
-    virtual void testSensor();
+    virtual void activateSensor() override;
+    virtual void deActivateSensor()override;
+    virtual void testSensor() const override;
+    virtual void addProtocol(std::shared_ptr<Emergency> e) override;
     virtual std::string getOverview() const;
 
 private:
     const long sensorID;
     const std::string vendor;
-    std::vector<const Emergency*> protocols;
+    std::vector<std::shared_ptr<Emergency>> protocols;
     bool state;
 
 };

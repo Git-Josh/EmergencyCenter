@@ -34,7 +34,7 @@ void SensorGroup::deActivateSensor()
     }
 }
 
-void SensorGroup::testSensor()
+void SensorGroup::testSensor() const
 {
     for (const auto & aSensor : sensors)
     {
@@ -57,6 +57,14 @@ std::string SensorGroup::getOverview() const
         result << aSensor->getOverview();
     }
     return result.str();
+}
+
+void SensorGroup::addProtocol(std::shared_ptr<Emergency> e)
+{
+    for (const auto & aSensor : sensors)
+    {
+        aSensor->addProtocol(e);
+    }
 }
 
 

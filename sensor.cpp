@@ -18,10 +18,18 @@ void Sensor::deActivateSensor()
 {
     state = false;
 }
-void Sensor::testSensor()
+void Sensor::testSensor() const
 {
-    //if(state) notifyEmergencyCenter();
+    if(state)
+    {
+        for(const auto &anEmergency : protocols) anEmergency->handleProtocol(sensorID);
+    }
 
+}
+
+void Sensor::addProtocol(std::shared_ptr<Emergency> e)
+{
+    protocols.push_back(e);
 }
 
 std::string Sensor::getOverview() const
